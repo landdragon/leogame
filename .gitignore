@@ -1,0 +1,4 @@
+*.tlog
+*.db
+LeoGame/Debug/
+*.filters
