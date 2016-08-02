@@ -2,25 +2,26 @@
 #include <windows.h> 
 
 using namespace std;
+const int MaxX = 9;
+const int MaxY = 9;
+void bordure(int x);
 
 void main()
 {
 	char * deplacement = new char[8];
 	bool EstCeQueJeContinue = true;
-	int map1[9][9] =  { { 0,0,0,0,0,0,0,0,0 },
-						{ 0,0,0,0,0,0,0,0,0 },
-						{ 0,0,0,0,0,0,0,0,0 },
-						{ 0,0,0,0,0,0,0,0,0 },
-						{ 0,0,0,0,0,0,0,0,0 },
-						{ 0,0,0,0,0,0,0,0,0 },
-						{ 0,0,0,0,0,0,0,0,0 },
-						{ 0,0,0,0,0,0,0,0,0 },
-						{ 0,0,0,0,0,0,0,0,0 } };
+	int map1[MaxX][MaxY] ={ { 0,0,0,0,0,0,0,0,0 },
+							{ 0,0,0,0,0,0,0,0,0 },
+							{ 0,0,0,0,0,0,0,0,0 },
+							{ 0,0,0,0,0,0,0,0,0 },
+							{ 0,0,0,0,0,0,0,0,0 },
+							{ 0,0,0,0,0,0,0,0,0 },
+							{ 0,0,0,0,0,0,0,0,0 },
+							{ 0,0,0,0,0,0,0,0,0 },
+							{ 0,0,0,0,0,0,0,0,0 } };
 	int x = 1;
 	int y = 7;
 
-
-	
 
 	while (EstCeQueJeContinue)
 	{
@@ -38,11 +39,7 @@ void main()
 			}
 			else
 			{
-				cout << "un magicien vous crie dans les oreilles :";
-				Sleep(1000);
-				cout << " VOUS NE PASSEREZ...";
-				Sleep(1000);
-				cout << " PAS !!!";
+				bordure();
 			}
 		}
 		else if (strcmp(deplacement, "bas") == 0)
@@ -54,11 +51,7 @@ void main()
 			}
 			else
 			{
-				cout << "un magicien vous crie dans les oreilles :";
-				Sleep(1000);
-				cout << " VOUS NE PASSEREZ...";
-				Sleep(1000);
-				cout << " PAS !!!";
+				bordure();
 			}
 		}
 		else if (strcmp(deplacement, "gauche") == 0)
@@ -70,11 +63,7 @@ void main()
 			}
 			else
 			{
-				cout << "un magicien vous crie dans les oreilles :";
-				Sleep(1000);
-				cout << " VOUS NE PASSEREZ...";
-				Sleep(1000);
-				cout << " PAS !!!";
+				bordure();
 			}
 		}
 		else if (strcmp(deplacement, "droite") == 0)
@@ -86,11 +75,7 @@ void main()
 			}
 			else
 			{
-				cout << "un magicien vous crie dans les oreilles :";
-				Sleep(1000);
-				cout << " VOUS NE PASSEREZ...";
-				Sleep(1000);
-				cout << " PAS !!!";
+				bordure();
 			}
 		}
 		else if (strcmp(deplacement, "quitter") == 0)
@@ -106,4 +91,15 @@ void main()
 
 	delete (deplacement);
 	return;
+}
+
+
+
+void bordure()
+{
+	cout << "un magicien vous crie dans les oreilles :";
+	Sleep(1000);
+	cout << " VOUS NE PASSEREZ...";
+	Sleep(1000);
+	cout << " PAS !!!";
 }
