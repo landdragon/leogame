@@ -2,3 +2,5 @@
 *.db
 LeoGame/Debug/
 *.filters
+*.opendb
+*.idb
